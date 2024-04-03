@@ -28,8 +28,6 @@ def load_model():
 
 model = load_model()
 
-# Load the image
-image = Image.open("heart attack.jpg")  # Replace with your image file
 
 # Add a title
 st.title("Heart Attack Predictor")
@@ -85,6 +83,6 @@ if st.button("Predict"):
     # Display the prediction result
     if prediction_label == "Heart Attack":
         st.error("❗ High Risk of Heart Attack")
-        st.image(image, use_column_width=True)
+        
     else:
         st.success("✅ Low Risk of Heart Attack")
